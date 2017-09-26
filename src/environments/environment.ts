@@ -6,3 +6,12 @@
 export const environment = {
   production: false
 };
+
+export const firebase = {
+  apiKey: "AIzaSyBYY3WTjz1qMHnHr09YUYgzoL7jGNqMsns",
+  authDomain: "email-auth-test-39f7b.firebaseapp.com",
+  databaseURL: "https://email-auth-test-39f7b.firebaseio.com",
+  projectId: "email-auth-test-39f7b",
+  storageBucket: "",
+  messagingSenderId: "55556855478"
+}
