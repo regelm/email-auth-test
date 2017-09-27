@@ -35,7 +35,7 @@ export class UserLoginComponent implements OnInit {
     if (this.validateForm(this.email, this.password)) {
       this.authService.signUpWithEmail(this.email, this.password)
         .then(() => {
-          this.router.navigate(['/user'])
+          this.router.navigate(['/students'])
         }).catch(_error => {
           this.error = _error
           this.router.navigate(['/'])
@@ -48,7 +48,7 @@ export class UserLoginComponent implements OnInit {
  
     if (this.validateForm(this.email, this.password)) {
       this.authService.loginWithEmail(this.email, this.password)
-        .then(() => this.router.navigate(['/user']))
+        .then(() => this.router.navigate(['/students']))
         .catch(_error => {
           this.error = _error
           console.log(this.error)
@@ -62,7 +62,7 @@ export class UserLoginComponent implements OnInit {
 
     if (this.validateForm(this.email, this.password)) {
       this.authService.googleLogin()
-        .then(() => this.router.navigate(['/user']))
+        .then(() => this.router.navigate(['/students']))
         .catch(_error => {
           this.error = _error
           console.log(this.error)

@@ -1,0 +1,13 @@
+<div class="tableContainer">
+  <h2 class="students">Students</h2>
+  <ul>
+    <li class="studentLi" *ngFor="let student of (students$ | async)" [class.done]="student.done">
+        <div class="student">
+          <h2>{{ student.name }}</h2>
+          <h4>{{ student.year }}</h4>
+        </div>
+    </li>
+  </ul>
+  <button type="button" class="btn basic-btn">Add Student</button>
+</div>
+

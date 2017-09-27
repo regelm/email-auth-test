@@ -1,58 +1,4 @@
-<!-- <div class="loginPanel" *ngIf="!authService.isUserEmailLoggedIn">
- 
-	<div style="width: 350px;" *ngIf="!isNewUser">
- 
-		<p *ngIf="errorMessage.length > 0" class="text-danger">
-			{{errorMessage}}</p>
-			
-		<p *ngIf="error.message.length > 0" class="text-danger">
-			{{error.message}}</p>
- 
-		<form (ngSubmit)="onLoginEmail()">
-			<div class="form-group">
-				<label for="email">Email</label> <input type="text"
-					class="form-control" id="email" name="email" required
-					[(ngModel)]="email">
-			</div>
- 
-			<div class="form-group">
-				<label for="password">Password</label> <input type="password"
-					class="form-control" id="password" name="password" required
-					[(ngModel)]="password">
-			</div>
- 
-			<button type="submit" class="btn btn-success">Log In</button>
-		</form>
- 
-		<h4 class="text-primary" (click)="changeForm()">Not have any Account yet? >> Register</h4>
-  </div>
-  <div style="width: 350px;" *ngIf="isNewUser">
- 
-		<p *ngIf="errorMessage.length > 0" class="text-danger">
-			{{errorMessage}}</p>
- 
-		<p *ngIf="error.message.length > 0" class="text-danger">
-			{{error.message}}</p>
- 
-		<form (ngSubmit)="onSignUp()">
-			<div class="form-group">
-				<label for="email">Email</label> <input type="email"
-					class="form-control" id="email" name="email" required
-					[(ngModel)]="email">
-			</div>
- 
-			<div class="form-group">
-				<label for="password">Password</label> <input type="password"
-					class="form-control" id="password" name="password" required
-					[(ngModel)]="password">
-			</div>
- 
-			<button type="submit" class="btn btn-success">Register</button>
-		</form>
- 
-		<h4 class="text-primary" (click)="changeForm()">Already have an Account? >> Log In</h4>
-	</div>
-</div> -->
+
 <div class="form-container">
   <h2>CS Advisor</h2>
 
@@ -60,7 +6,6 @@
 
   <form #formData='ngForm' (ngSubmit)="onLoginEmail()" *ngIf="isNewUser">
     <input type="text" class="form-control txt" id="email" placeholder="Email address.." [(ngModel)]="email" name="email" required>
-    <!-- <input type="text" class="form-control" id="email" name="email" required[(ngModel)]="email"> -->
     <input type="password" placeholder="Password" [(ngModel)]="password" name="password" class="form-control txt" required>
 
     <button type="submit" class="btn btn-success basic-btn">Log in</button>
@@ -69,8 +14,8 @@
   </form>
 
   <form #formData='ngForm' (ngSubmit)="onSignUp()" *ngIf="!isNewUser">
-    <input type="text" class="form-control txt" id="email" placeholder="Email address.." [(ngModel)]="email" name="email" required>
-    <input type="password" placeholder="Password" [(ngModel)]="password" name="password" class="form-control txt" required>
+    <input type="text" autocomplete="off" class="form-control txt" id="email" placeholder="Email address.." [(ngModel)]="email" name="email" required>
+    <input type="password" autocomplete="off" placeholder="Password" [(ngModel)]="password" name="password" class="form-control txt" required>
 
     <button type="submit" class="btn btn-success basic-btn">Create Account</button>
     <a (click)="changeForm()" class="alc">Already have an account?</a>
