@@ -95,7 +95,9 @@ export class AuthService {
   }
  
   signOut(): void {
-    this.afAuth.auth.signOut();
-    this.router.navigate(['/'])
+    this.afAuth.auth.signOut().then(() => {
+      this.router.navigate(['/'])
+    });
   }
+
 }

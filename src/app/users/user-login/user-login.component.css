@@ -16,6 +16,7 @@
          -3px 3px #656565;
 }
 
+
 button {
     padding:1.2em;
     width:100%;
@@ -50,11 +51,11 @@ h2 {
 }
 
 .error {
-    background:#f1f0ef;
     padding:1em;
     width:100%;
     display:block;
     margin-bottom:20px;
+    color: red;
 }
 
 #goback {

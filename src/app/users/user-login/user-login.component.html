@@ -2,7 +2,7 @@
 <div class="form-container">
   <h2>CS Advisor</h2>
 
-  <!-- <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span> -->
+  <span class="error" *ngIf="error.message !== ''">{{ error.message }}</span>
 
   <form #formData='ngForm' (ngSubmit)="onLoginEmail()" *ngIf="isNewUser">
     <input type="text" class="form-control txt" id="email" placeholder="Email address.." [(ngModel)]="email" name="email" required>

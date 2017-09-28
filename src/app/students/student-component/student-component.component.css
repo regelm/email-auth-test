@@ -28,7 +28,7 @@
     margin-right: 5%;
     margin-bottom: 2%;
     margin-left: 5%;
-    min-height: 10%;
+    height: 5%;
     -webkit-box-shadow: 0 5px 5px -2px #0E1119;
     -moz-box-shadow: 0 5px 5px -2px #0E1119;
          box-shadow: 0 5px 5px -2px #0E1119;
@@ -48,7 +48,7 @@
          box-shadow: 0 5px 5px -2px #0E1119;
 }
 
-button {
+.addStudent {
     padding:1.2em;
     width: 77.5%;
     cursor:pointer;
@@ -58,6 +58,12 @@ button {
     font-size:1.3em;
     height: 10%;
     margin-left: 8.5%;
+}
+
+.logout {
+    margin-top: -45px;
+    left: 20.5%;
+    position: absolute;
 }
 
 .tableContainer div:hover {
@@ -77,9 +83,10 @@ button {
     height: 100%;
     margin-top: -65px;
     overflow-y: auto;
-    width: 25%;
+    width: 20%;
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 
 .container {
@@ -112,9 +119,4 @@ button {
 	  transition-duration: 0.4s;
 	  transition-property: all;
   transition-timing-function: line;
-}
-
-@media (max-width: 800px) {
-.container td:nth-child(4),
-.container th:nth-child(4) { display: none; }
 }

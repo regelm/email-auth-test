@@ -20,6 +20,7 @@ import { ItemDetailComponent } from './items/item-detail/item-detail.component';
 import { ItemFormComponent } from './items/item-form/item-form.component';
 import { StudentComponentComponent } from './students/student-component/student-component.component';
 import { StudentFormComponent } from './students/student-form/student-form.component';
+import { ModalModule } from 'ng2-modal';
 
 export const firebase = {
   apiKey: "AIzaSyBYY3WTjz1qMHnHr09YUYgzoL7jGNqMsns",
@@ -55,7 +56,8 @@ export class AdListing {
     AppRoutingModule,
     AngularFireModule.initializeApp(firebase),
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ModalModule
   ],
   providers: [
     AuthService,
